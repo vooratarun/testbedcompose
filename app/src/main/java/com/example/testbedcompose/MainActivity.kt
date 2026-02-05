@@ -21,8 +21,13 @@ import com.example.testbedcompose.basics.BoxExample
 import com.example.testbedcompose.basics.ButtonExample
 import com.example.testbedcompose.basics.ColumnBoxExample
 import com.example.testbedcompose.basics.ColumnExample
+import com.example.testbedcompose.basics.DashboardExample
+import com.example.testbedcompose.basics.NestedRowExample
 import com.example.testbedcompose.basics.PartiallySelectableText
+import com.example.testbedcompose.basics.ProfileRowExample
 import com.example.testbedcompose.basics.ResourceAccess
+import com.example.testbedcompose.basics.RowExample
+import com.example.testbedcompose.basics.UserCard
 import com.example.testbedcompose.basics.accessImage
 import com.example.testbedcompose.basics.colorfulText
 import com.example.testbedcompose.basics.outlinedTextFieldSample
@@ -59,7 +64,12 @@ class MainActivity : ComponentActivity() {
                         //ColumnExample()
                         space()
 //                        ColumnBoxExample()
-                        BoxExample()
+//                        BoxExample()
+//                        RowExample()
+//                          NestedRowExample()
+                        //ProfileRowExample()
+                        //DashboardExample()
+                        UserCard()
                     }
 
                 }
