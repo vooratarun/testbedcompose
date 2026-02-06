@@ -41,8 +41,8 @@ fun BottomSheetExample() {
     }
 
 
-    var state by remember { mutableStateOf(false) }
-    state = true
+//    var state by remember { mutableStateOf(false) }
+//    state = true
 
     var sheetState = rememberModalBottomSheetState(
         skipPartiallyExpanded = false

@@ -1,5 +1,6 @@
 package com.example.testbedcompose.basics
 
+import android.annotation.SuppressLint
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -23,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 
 
+@SuppressLint("SuspiciousIndentation")
 @Composable
 fun DialogWithImage() {
     // Implementation goes here

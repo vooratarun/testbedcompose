@@ -66,6 +66,8 @@ import com.example.testbedcompose.basics.accessImage
 import com.example.testbedcompose.basics.colorfulText
 import com.example.testbedcompose.basics.outlinedTextFieldSample
 import com.example.testbedcompose.basics.simpleText
+import com.example.testbedcompose.meditation.GreetingSection
+import com.example.testbedcompose.meditation.HomeScreen
 import com.example.testbedcompose.ui.theme.TestbedcomposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -141,7 +143,8 @@ class MainActivity : ComponentActivity() {
 //                        BottomBarExample()
 //                        TopAppBarExample()
 //                          AppNavigation()
-                        SnackBarExample()
+//                        SnackBarExample()
+                            HomeScreen()
                     }
                 }
 
