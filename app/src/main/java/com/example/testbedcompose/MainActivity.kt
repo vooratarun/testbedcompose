@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,11 +18,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.testbedcompose.basics.AnnotatedStringwithListenerSample
+import com.example.testbedcompose.basics.BottomSheetExample
 import com.example.testbedcompose.basics.BoxExample
+import com.example.testbedcompose.basics.BoxExampleNew
 import com.example.testbedcompose.basics.ButtonExample
 import com.example.testbedcompose.basics.ColumnBoxExample
 import com.example.testbedcompose.basics.ColumnExample
+import com.example.testbedcompose.basics.CounterScreen
 import com.example.testbedcompose.basics.DashboardExample
+import com.example.testbedcompose.basics.ElevatedCardExample
+import com.example.testbedcompose.basics.LazyColumnExample
+import com.example.testbedcompose.basics.LazyRowExample
+import com.example.testbedcompose.basics.ModifierExample
 import com.example.testbedcompose.basics.NestedRowExample
 import com.example.testbedcompose.basics.PartiallySelectableText
 import com.example.testbedcompose.basics.ProfileRowExample
@@ -69,13 +77,22 @@ class MainActivity : ComponentActivity() {
 //                          NestedRowExample()
                         //ProfileRowExample()
                         //DashboardExample()
-                        UserCard()
+                       // UserCard()
+
+                        //LazyColumnExample()
+                        //LazyRowExample()
+                        // ModifierExample()
+//                        BoxExampleNew()
+//                        BottomSheetExample()
+                        //CounterScreen()
+                        ElevatedCardExample()
+
+                    }
                     }
 
                 }
             }
         }
-    }
 }
 
 
