@@ -1,0 +1,200 @@
+//package com.example.testbedcompose.basics
+//
+//import androidx.compose.foundation.Image
+//import androidx.compose.foundation.clickable
+//import androidx.compose.foundation.layout.*
+//import androidx.compose.foundation.lazy.LazyColumn
+//import androidx.compose.foundation.lazy.items
+//import androidx.compose.foundation.rememberScrollState
+//import androidx.compose.foundation.shape.RoundedCornerShape
+//import androidx.compose.foundation.verticalScroll
+//import androidx.compose.material3.Button
+//import androidx.compose.material3.ExperimentalMaterial3Api
+//import androidx.compose.material3.MaterialTheme
+//import androidx.compose.material3.ModalBottomSheet
+//import androidx.compose.material3.OutlinedTextField
+//import androidx.compose.material3.Text
+//import androidx.compose.runtime.*
+//import androidx.compose.runtime.saveable.rememberSaveable
+//import androidx.compose.ui.Alignment
+//import androidx.compose.ui.Modifier
+//import androidx.compose.ui.platform.LocalContext
+//import androidx.compose.ui.res.painterResource
+//import androidx.compose.ui.unit.dp
+//import com.simon.xmaterialccp.component.MaterialCountryCodePicker
+//import com.simon.xmaterialccp.data.ccpDefaultColors
+//import com.simon.xmaterialccp.data.utils.checkPhoneNumber
+//import com.simon.xmaterialccp.data.utils.getDefaultLangCode
+//import com.simon.xmaterialccp.data.utils.getDefaultPhoneCode
+//import com.simon.xmaterialccp.data.utils.getFlags
+//import com.simon.xmaterialccp.data.utils.getLibCountries
+//import com.simon.xmaterialccp.data.utils.setLocale
+//
+//
+//@OptIn(ExperimentalMaterial3Api::class)
+//@Composable
+//fun CountryCodePicker() {
+//    // Implementation of the country code picker goes here
+//
+//
+//    Text("Country Code Picker", style = MaterialTheme.typography.headlineMedium)
+////    SelectCountryBody(
+////        Modifier
+////            .padding(top = 20.dp)
+////            .fillMaxSize()
+////            .padding(15.dp)
+////            .verticalScroll(rememberScrollState())
+////    )
+//}
+//
+//@Composable
+//fun SelectCountryBody(modifier: Modifier) {
+//    Column(
+//        modifier = modifier,
+//        verticalArrangement = Arrangement.Center,
+//        horizontalAlignment = Alignment.CenterHorizontally
+//    ) {
+//
+//        SelectCountryWithCountryCode()
+//    }
+//}
+//
+//@OptIn(ExperimentalMaterial3Api::class)
+//@Composable
+//fun SelectCountryWithCountryCode() {
+//    val context = LocalContext.current
+//    var phoneCode by remember { mutableStateOf(getDefaultPhoneCode(context)) }
+//    val phoneNumber = rememberSaveable { mutableStateOf("") }
+//    var defaultLang by rememberSaveable { mutableStateOf(getDefaultLangCode(context)) }
+//    var isValidPhone by remember { mutableStateOf(true) }
+//
+//    LaunchedEffect(key1 = true) {
+//        setLocale(context, "en")
+//    }
+//
+//    MaterialCountryCodePicker(
+//        pickedCountry = {
+//            phoneCode = it.countryPhoneCode
+//            defaultLang = it.countryCode
+//        },
+//        defaultCountry = getLibCountries().single { it.countryCode == defaultLang },
+//        error = !isValidPhone,
+//        text = phoneNumber.value,
+//        onValueChange = { phoneNumber.value = it },
+//        searchFieldPlaceHolderTextStyle = MaterialTheme.typography.bodyMedium,
+//        searchFieldTextStyle = MaterialTheme.typography.bodyMedium,
+//        phonenumbertextstyle = MaterialTheme.typography.bodyMedium,
+//        countrytextstyle = MaterialTheme.typography.bodyMedium,
+//        countrycodetextstyle = MaterialTheme.typography.bodyMedium,
+//        showErrorText = true,
+//        showCountryCodeInDIalog = true,
+//        showDropDownAfterFlag = true,
+//        textFieldShapeCornerRadiusInPercentage = 40,
+//        searchFieldShapeCornerRadiusInPercentage = 40,
+//        appbartitleStyle = MaterialTheme.typography.titleLarge,
+//        countryItemBgShape = RoundedCornerShape(5.dp),
+//        showCountryFlag = true,
+//        showCountryCode = true,
+//        showClearIcon = true,
+//        flagShape = RoundedCornerShape(10f),
+//        isEnabled = true,
+//        showErrorIcon = true,
+//        colors = ccpDefaultColors(
+//            primaryColor = MaterialTheme.colorScheme.primary,
+//            errorColor = MaterialTheme.colorScheme.error,
+//            backgroundColor = MaterialTheme.colorScheme.background,
+//            surfaceColor = MaterialTheme.colorScheme.surface,
+//            outlineColor = MaterialTheme.colorScheme.outline,
+//            disabledOutlineColor = MaterialTheme.colorScheme.outline.copy(0.1f),
+//            unfocusedOutlineColor = MaterialTheme.colorScheme.onBackground.copy(0.3f),
+//            textColor = MaterialTheme.colorScheme.onBackground.copy(0.7f),
+//            cursorColor = MaterialTheme.colorScheme.primary,
+//            topAppBarColor = MaterialTheme.colorScheme.surface,
+//            countryItemBgColor = MaterialTheme.colorScheme.surface,
+//            searchFieldBgColor = MaterialTheme.colorScheme.surface,
+//            dialogNavIconColor = MaterialTheme.colorScheme.onBackground.copy(0.7f),
+//            dropDownIconTint = MaterialTheme.colorScheme.onBackground.copy(0.7f)
+//
+//        ),
+//        errorTextStyle = MaterialTheme.typography.bodySmall,
+//        errorModifier = Modifier.padding(top = 3.dp, start = 10.dp),
+//        dialogItemBuilder = { country, onclick ->
+//
+//            Row(Modifier.clickable {
+//                onclick()
+//            }) {
+//                Image(
+//                    painterResource(
+//                        id = getFlags(
+//                            country.countryCode
+//                        )
+//                    ), contentDescription = null
+//                )
+//                Text(text = country.cNames)
+//            }
+//        },
+//        customDialog = { countries, onCountryPicked, onDismiss ->
+//
+//            ModalBottomSheet(
+//                onDismissRequest = {
+//                    onDismiss()
+//                }
+//            ) {
+//
+//                Column {
+//
+//                    // Search
+//                    OutlinedTextField(
+//                        value = "",
+//                        onValueChange = { },
+//                        modifier = Modifier
+//                            .fillMaxWidth()
+//                            .padding(16.dp),
+//                        placeholder = { Text("Search country") },
+//                        singleLine = true
+//                    )
+//
+//                    // Country list
+//                    LazyColumn {
+//                        items(countries) { country ->
+//                            Row(
+//                                modifier = Modifier
+//                                    .fillMaxWidth()
+//                                    .clickable {
+//                                        onCountryPicked(country)
+//                                    }
+//                                    .padding(16.dp),
+//                                verticalAlignment = Alignment.CenterVertically
+//                            ) {
+//                                Image(
+//                                    painter = painterResource(getFlags(country.countryCode)),
+//                                    contentDescription = null,
+//                                    modifier = Modifier.size(24.dp)
+//                                )
+//                                Spacer(Modifier.width(12.dp))
+//                                Text(text = country.cNames)
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    )
+//
+//    val fullPhoneNumber = "$phoneCode${phoneNumber.value}"
+//    val checkPhoneNumber = checkPhoneNumber(
+//        phone = phoneNumber.value,
+//        fullPhoneNumber = fullPhoneNumber,
+//        countryCode = defaultLang
+//    )
+//    Spacer(modifier = Modifier.height(20.dp))
+//    Button(
+//        onClick = {
+//            isValidPhone = checkPhoneNumber
+//        },
+//        modifier = Modifier
+//            .fillMaxWidth(0.8f)
+//    ) {
+//        Text(text = "Phone Verify")
+//    }
+//}
