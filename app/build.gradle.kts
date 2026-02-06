@@ -59,6 +59,7 @@ dependencies {
 
 //   implementation(libs.xmaterialccp)
     implementation ("com.canopas.compose-animated-navigationbar:bottombar:1.0.1")
+    implementation("androidx.navigation:navigation-compose:2.8.0-beta06")
 
 
 }

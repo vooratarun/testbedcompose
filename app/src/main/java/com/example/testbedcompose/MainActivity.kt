@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.newjetpackcomposecourse.`26_Navigation`.AppNavigation
 import com.example.testbedcompose.basics.AnnotatedStringwithListenerSample
 import com.example.testbedcompose.basics.BasicDropdownMenuExample
 import com.example.testbedcompose.basics.BottomBarExample
@@ -57,6 +58,7 @@ import com.example.testbedcompose.basics.ScaffoldExample
 import com.example.testbedcompose.basics.SearchScreen
 import com.example.testbedcompose.basics.SegmentedbuttonEx
 import com.example.testbedcompose.basics.SliderExample
+import com.example.testbedcompose.basics.SnackBarExample
 import com.example.testbedcompose.basics.SwitchExample
 import com.example.testbedcompose.basics.TopAppBarExample
 import com.example.testbedcompose.basics.UserCard
@@ -137,7 +139,9 @@ class MainActivity : ComponentActivity() {
 //                        SwitchExample()
 //                          DatePickerExample()
 //                        BottomBarExample()
-                        TopAppBarExample()
+//                        TopAppBarExample()
+//                          AppNavigation()
+                        SnackBarExample()
                     }
                 }
 
