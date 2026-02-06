@@ -30,7 +30,10 @@ import com.example.testbedcompose.basics.ColumnBoxExample
 import com.example.testbedcompose.basics.ColumnExample
 import com.example.testbedcompose.basics.CounterScreen
 import com.example.testbedcompose.basics.DashboardExample
+import com.example.testbedcompose.basics.DialogWithImage
 import com.example.testbedcompose.basics.ElevatedCardExample
+import com.example.testbedcompose.basics.FloatingButton
+import com.example.testbedcompose.basics.InputChipExample
 import com.example.testbedcompose.basics.LazyColumnExample
 import com.example.testbedcompose.basics.LazyRowExample
 import com.example.testbedcompose.basics.ModifierExample
@@ -92,17 +95,21 @@ class MainActivity : ComponentActivity() {
 //                        ElevatedCardExample()
 //                          CheckBoxExample()
 
-                        CheckboxWithTextClick()
-                        CheckboxExampleNew()
+//                        CheckboxWithTextClick()
+//                        CheckboxExampleNew()
+//
+//                        CheckboxwithLazyColumn()
+//                          DialogWithImage()
 
-                        CheckboxwithLazyColumn()
+//                        FloatingButton()
+                        InputChipExample()
 
                     }
-                    }
-
                 }
+
             }
         }
+    }
 }
 
 
