@@ -22,6 +22,10 @@ import com.example.testbedcompose.basics.BottomSheetExample
 import com.example.testbedcompose.basics.BoxExample
 import com.example.testbedcompose.basics.BoxExampleNew
 import com.example.testbedcompose.basics.ButtonExample
+import com.example.testbedcompose.basics.CheckBoxExample
+import com.example.testbedcompose.basics.CheckboxExampleNew
+import com.example.testbedcompose.basics.CheckboxWithTextClick
+import com.example.testbedcompose.basics.CheckboxwithLazyColumn
 import com.example.testbedcompose.basics.ColumnBoxExample
 import com.example.testbedcompose.basics.ColumnExample
 import com.example.testbedcompose.basics.CounterScreen
@@ -85,7 +89,13 @@ class MainActivity : ComponentActivity() {
 //                        BoxExampleNew()
 //                        BottomSheetExample()
                         //CounterScreen()
-                        ElevatedCardExample()
+//                        ElevatedCardExample()
+//                          CheckBoxExample()
+
+                        CheckboxWithTextClick()
+                        CheckboxExampleNew()
+
+                        CheckboxwithLazyColumn()
 
                     }
                     }
