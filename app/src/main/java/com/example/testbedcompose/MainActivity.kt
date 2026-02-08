@@ -69,6 +69,7 @@ import com.example.testbedcompose.basics.simpleText
 import com.example.testbedcompose.instagram.ProfileScreen
 import com.example.testbedcompose.meditation.GreetingSection
 import com.example.testbedcompose.meditation.HomeScreen
+import com.example.testbedcompose.realestate.RealestateMainScreen
 import com.example.testbedcompose.ui.theme.TestbedcomposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -147,7 +148,8 @@ class MainActivity : ComponentActivity() {
 //                        SnackBarExample()
 //                            HomeScreen()
 
-                        ProfileScreen()
+//                        ProfileScreen()
+                        RealestateMainScreen()
                     }
                 }
 
